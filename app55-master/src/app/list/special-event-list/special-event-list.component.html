@@ -1,0 +1,22 @@
+<h5>Special Event</h5>
+<input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox"><br>
+<table class="table table-bordered table-sm  ">
+  <thead class="thead-dark ">
+    <th>Event Id</th>
+    <th>Event Name</th>
+    <th>Event Address</th>
+    <th>Action</th>
+  </thead>
+
+  <tbody>
+    <tr *ngFor = "let event of generalEvent | grdFilter: {id: searchText, eventName:searchText,  eventAddress: searchText}">
+      <td>{{event.id}}</td>
+      <td>{{event.eventName}}</td>
+      <td>{{event.eventAddress}}</td>
+      <td>
+        <button *ngIf="token.loggedIn() && token.loggedAdmin()" class="btn btn-danger" style="position:relative;left:1px;bottom: 1px"  (click) = "delete(event)">Delete</button>
+        <button class="btn btn-primary" routerLink = "/specialEventDetails/{{event.id}}">Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+.sp-event {
+  
+}
+
+.heading {
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 700;
+  font-size: 2.2rem;
+  background-color: #56AB5E;
+  color: white;  
+  padding: .3rem 3rem ;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+form label {
+  font-family: 'Lato', sans-serif;  
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.container {
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.btn-success {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  padding: .1 1rem;
+  width: 30%;
+}
+
+.btn-primary {
+  text-transform: uppercase;
+  width: 30%;
+}

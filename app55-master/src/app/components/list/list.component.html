@@ -1,0 +1,28 @@
+<div class="container">
+  <h2 style="color: rgb(48, 47, 47)"> User List</h2>
+  <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox"><br><br>
+  <table class="table table-sm table-dark ">
+    <thead>
+        <th>No</th>
+      <th>Name</th>
+      <th>email</th>
+      <th>username</th>
+      <th>Roles</th>
+      <th>Action</th>
+  </thead>
+    <tbody>
+        <tr *ngFor="let user of users | grdFilter: {name: searchText, email:searchText,  username: searchText}; let i=index;">
+        <td>{{i+1}}</td>
+      <td>{{user.name}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.username}}</td>
+      <td>{{authorities}}</td>
+      <td>
+        <button type="button" class="btn btn-danger" (click)="delete(user)">Delete</button>
+        <button type="button" class="btn btn-primary" (click)="edit()" style="position:relative;left:3px">Edit</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

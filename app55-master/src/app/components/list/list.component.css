@@ -1,0 +1,20 @@
+
+input {
+    border: none;
+    border-radius: 1px;
+    background-color: #4d4d4d;
+    padding: 2px;
+    color: #e6e6e6;
+    text-align: center
+}
+
+tr:hover {
+    background-color: #4d4d4d
+}
+
+button {
+    height: 29px;
+    font-size: 15px;
+    padding: 0 5px 5px 5px;
+    border-radius: 0px;
+}

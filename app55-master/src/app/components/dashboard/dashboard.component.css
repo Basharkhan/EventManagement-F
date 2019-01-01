@@ -1,0 +1,29 @@
+
+.bg-1 {
+  position: absolute;
+  top: 100px;
+  border: 1px solid  #d9d9d9;
+  padding: 30px;
+  width: 350px;
+  height: 200px;
+  left: 500px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.header {
+  position: relative;
+  border-bottom: 1px solid gray;
+  font-size: 24px;
+  text-align: center;
+  color: #595959;
+}
+
+.body {
+  position: relative;
+  top: 30px;
+  color: #595959;
+}
+
+h4 {
+  font-size: 19px;
+}

@@ -1,0 +1,138 @@
+
+.first1 {
+    border: 1px solid #d9d9d9;
+    height: 1250px;
+    width: 1150px
+}
+
+img {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    left: 620px;
+    top: 30px;
+}
+
+.eventName {
+    position: relative;
+    font-size: 19px;
+    width: 600px;
+    bottom: 250px;
+    color: #666666;
+}
+
+.organizerName {
+    position: relative;
+    bottom: 237px;
+    font-size: 16px
+}
+
+button {
+    position: absolute;
+    bottom: 20px;
+    height: 40px;
+    left: 96px;
+    width: 400px;
+}
+
+.name {
+    position: relative;
+    left: 10px;
+}
+
+.EventDetails {
+    position: absolute;
+    left: 160px;
+    top: 475px;
+}
+
+.eventDetails-inner {
+    position: relative;
+    width: 550px;
+    text-align: justify;
+    word-spacing: -2px
+}
+
+.EventAboutCaption {
+    position: relative;
+    bottom: 12px;
+    left: 220px;
+    font-size: 22px;
+}
+
+.location {
+    position: absolute;
+    left: 850px;
+    top: 476px
+}
+
+.location-caption {
+    font-size: 23px
+}
+
+.location-inner {
+    font-size: 16px;
+    width: 400px
+}
+
+.organizer-details {
+    position: absolute;
+    top:770px;
+    left: 160px;
+}
+
+.organizerDetails {
+    position: relative;
+    font-size: 16px;
+    width: 550px;
+    word-spacing: 4px;
+    text-align: justify;
+    
+}
+
+.captionOrganizer {
+    font-size: 22px;
+}
+
+.date {
+    position: absolute;
+    left: 850px;
+    top: 570px
+}
+
+.date-caption {
+    font-size: 23px;
+}
+
+.date-inner {
+    font-size: 16px;
+}
+
+.time {
+    position: absolute;
+    left: 850px;
+    top: 660px
+}
+
+.time-caption {
+    font-size: 23px
+}
+
+.time-inner {
+    font-size: 16px;
+}
+
+.subevent {
+    position: absolute;
+    left:850px;
+    top: 810px;
+}
+
+td {
+    width: 135px;
+    height: 10px;
+}
+
+table {
+    font-size: 14px
+}

@@ -1,0 +1,19 @@
+tr:hover {
+    background-color: #4d4d4d;
+    color: white
+}
+
+button {
+    height: 29px;
+    font-size: 15px;
+    padding: 0 5px 5px 5px;
+}
+
+.advancedSearchTextbox {
+    position: relative;
+    left: 2px;
+}
+
+.advancedSearchTextbox::placeholder {
+    text-align: center
+}

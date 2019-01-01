@@ -1,0 +1,54 @@
+
+input {
+    width: 60%;
+    position: relative;
+    float: right;
+    height: 30px;
+    font-size: 13px;
+    border-radius: 0px;
+}
+
+input:focus {
+    box-shadow: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #80bfff
+}
+
+.container {
+    border: 1px solid  #e6e6e6;
+    width: 35%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 40px;
+    padding: 19px;
+    background-color:  #f2f2f2
+}
+
+input, label {
+    display: inline-block;
+    padding: 1px;
+}
+
+button {
+    position: relative;
+    top: 10px;
+    left: 30%;
+}
+
+h4 {
+    background-color: #bfbfbf;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 5px
+}
+
+.title-payment {
+    background-color: #d9d9d9;
+    position: relative;
+    left: 30%;
+    height: 50px;
+    width: 40%;
+    font-size: 20px;
+}

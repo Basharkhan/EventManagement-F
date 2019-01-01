@@ -1,0 +1,45 @@
+
+<div class="container">
+              
+    <h3>Special Events List</h3>
+    <div class="card" *ngFor = "let event of pagedItems| grdFilter: {eventName: searchText, category:searchText,  eventAddress: searchText}; let i=index;">
+      <div class="card-body">
+        <a class="card-title" routerLink = "/specialEventDetails/{{event.id}}">{{event.eventName}}</a>
+        <img src="{{event.url}}" routerLink = "/specialEventDetails/{{event.id}}">
+        <p class="card-text">{{event.eventAddress}}</p>
+        <h5>Organized by</h5> <p class="card-text" style="color:#208000">{{event.organizerName}}</p>
+      </div>
+    </div>
+
+    <div class="page-config">
+
+    <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+
+      <li [ngClass]="{disabled:pager.currentPage === 1}">
+          <a (click)="setPage(1)">First</a>
+      </li>
+
+      <li [ngClass]="{disabled:pager.currentPage === 1}">
+          <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+      </li>
+
+      <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+          <a (click)="setPage(page)">{{page}}</a>
+      </li>
+
+      <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+          <a (click)="setPage(pager.currentPage + 1)">Next</a>
+      </li>
+
+      <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+          <a (click)="setPage(pager.totalPages)">Last</a>
+      </li>
+
+  </ul>
+
+  </div>
+
+  </div>
+
+
+  
