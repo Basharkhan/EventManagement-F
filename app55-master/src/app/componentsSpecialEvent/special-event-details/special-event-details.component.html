@@ -12,12 +12,13 @@
       <h3>{{specialEvents.date}}</h3>
       <h3>{{specialEvents.eventAddress}}</h3>      
       <h4>Registration Fee {{specialEvents.price}} ৳</h4>      
+      <h4>Remaining Ticket {{specialEvents.ticketVacancy}}</h4>      
     </div>
   </div> <!--End of 1st row section-->
 
   <div class="section-two">
   <div class="row text-center about"> <!--Start of 2nd row-->
-    <div class="col-md-6">
+    <div class="col-md-6 justify-content">
       <h1>About</h1>
       <div class="heading-underline"></div>
       <p class="lead">{{specialEvents.eventDescription}}</p>
@@ -42,7 +43,7 @@
               <td>{{subEvent.startTime}}</td>
               <td>{{subEvent.endTime}}</td>
               <td>{{subEvent.vacancy}}</td>
-              <td> <input type="checkbox"
+              <td> <input [disabled]="false" type="checkbox"
                 [ngModelOptions]="{standalone: true}"
                 [(ngModel)]="subEvent.selected"/></td>
 
@@ -52,9 +53,15 @@
         <div>
           <small *ngIf="error"  class="text-danger">Time conflict, Please check another</small>
         </div>
-        <div>
-          <button  class="btn btn-success float-right" type="button" (click)="getSelectedCategories()">Get Ticket</button>
+
+        <div *ngIf="isVacant">
+            <button [disabled]="true"   class="btn btn-success float-right" type="button">Sold Out</button>
         </div>
+
+          <div *ngIf="!isVacant">          
+            <button  class="btn btn-success float-right" type="button" (click)="getSelectedCategories()">Get Ticket</button>
+          </div>      
+
     </div> <!--End of table-->
   </div> <!--End of second row section-->
   </div>

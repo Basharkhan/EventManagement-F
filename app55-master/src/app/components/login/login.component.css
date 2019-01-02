@@ -20,7 +20,7 @@ h1 {
 .jumbo {	
 	margin-top: 3rem;	
 	position: relative;    
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);    
 }
 
 .input-group {
@@ -29,7 +29,7 @@ h1 {
 
 .jumbo h1 {	
 	color: rgb(68, 66, 66);
-	font-size: 2rem;
+	font-size: 1.5rem;
     font-family: 'Lato', sans-serif;
     font-weight: 700;
 }

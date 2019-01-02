@@ -1,6 +1,8 @@
 package EventManagement;
 
 import EventManagement.model.GeneralEvent;
+import EventManagement.model.SpecialEvent;
+import EventManagement.model.SubEvent;
 import EventManagement.repository.GeneralEventRepository;
 import EventManagement.repository.SpecialEventRepository;
 import EventManagement.repository.UserRepository;
@@ -17,7 +19,7 @@ import java.util.List;
 
 @SpringBootApplication
 public class SpringBootJwtAuthenticationApplication  {
-
+    // https://farm5.staticflickr.com/4814/43983798100_00c9e801d5_b.jpg
     @Autowired
     private GeneralEventRepository generalEventRepository;
     @Autowired
@@ -31,11 +33,9 @@ public class SpringBootJwtAuthenticationApplication  {
     @Bean
     CommandLineRunner runner () {
         return args -> {
-            List<GeneralEvent> generalEventList = generalEventRepository.findAll();
-            for(int i = 0; i < generalEventList.size(); i++) {
-                System.out.println(generalEventList.get(i).getEventName());
-                System.out.println(generalEventList.get(i).getEventDescription());
-            }
+//            SpecialEvent specialEvent = specialEventRepository.findSpecialEventById("5c2606ad7650ca12546b1d32");
+//            List<SubEvent> subEventList = specialEvent.getSubEvents();
+//            subEventList.remove(0).getName();
         };
     }
 }

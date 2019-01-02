@@ -11,6 +11,7 @@ import { User } from '../../user';
 })
 export class RegisterComponent implements OnInit {
   user: User = new User();
+  errorMsg = '';
 
   constructor(private authService: AuthserviceService, private router: Router) { }
  
@@ -21,8 +22,9 @@ export class RegisterComponent implements OnInit {
     .subscribe(
       res => {
         this.router.navigate(['/login'])
-      },
-      err => console.log(err)
+      }, err =>{
+      this.errorMsg = err, console.log(err)
+      }      
     )      
 }
 }

@@ -84,8 +84,8 @@ public class UserDetailsServiceImpl implements UserDetailsService, UserService {
 	@Override
 	public void createUser(SignUpForm signUpForm) {
 		User user = new User();
-		user.setName(signUpForm.getName());
 		user.setUsername(signUpForm.getUsername());
+		user.setName(signUpForm.getName());
 		user.setEmail(signUpForm.getEmail());
 		user.setPassword(passwordEncoder.encode(signUpForm.getPassword()));
 		Role role = new Role("USER");
@@ -98,8 +98,8 @@ public class UserDetailsServiceImpl implements UserDetailsService, UserService {
 	@Override
 	public void createAdmin(SignUpForm signUpForm) {
 		User user = new User();
-		user.setName(signUpForm.getName());
 		user.setUsername(signUpForm.getUsername());
+		user.setName(signUpForm.getName());
 		user.setEmail(signUpForm.getEmail());
 		user.setPassword(passwordEncoder.encode(signUpForm.getPassword()));
 		Role role = new Role("ADMIN");
@@ -117,7 +117,7 @@ public class UserDetailsServiceImpl implements UserDetailsService, UserService {
 		System.out.println("User Name: " + user.getUsername());
 		System.out.println("Event Name: " + specialEvent.getEventName());
 
-		String dest = "E:/Pdf/";
+		String dest = "D:/Pdf/";
 
 		String fileName = user.getUsername() + "-" + specialEvent.getId() + ".pdf";
 

@@ -9,7 +9,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="far fa-user"></i></span>
                 </div>
-                <input [(ngModel)]="user.name" required #username="ngModel" [class.is-invalid]="username.invalid && username.touched" class="form-control" type="text" name="username" placeholder="Enter Username">                
+                <input [(ngModel)]="user.username" required #username="ngModel" [class.is-invalid]="username.invalid && username.touched" class="form-control" type="text" name="username" placeholder="Enter Username">                
             </div>
         <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required</small>    
         </div>
@@ -20,7 +20,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                 </div>
-                <input [(ngModel)]="user.fullName" required #fullName="ngModel" [class.is-invalid]="fullName.invalid && fullName.touched" class="form-control" type="text" name="fullName" placeholder="Enter Fullname">    
+                <input [(ngModel)]="user.name" required #fullName="ngModel" [class.is-invalid]="fullName.invalid && fullName.touched" class="form-control" type="text" name="fullName" placeholder="Enter Fullname">    
             </div>
             <small class="text-danger" [class.d-none]="fullName.valid || fullName.untouched">Fullname is required</small>    
         </div>
@@ -45,6 +45,10 @@
                 <input [(ngModel)]="user.password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control" type="password" name="password" placeholder="Enter Password">
             </div>
             <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>    
+        </div>
+
+        <div *ngIf="errorMsg" class="form-group">
+            <small class="text-danger">Username or email already exists</small>
         </div>
 
         <button [disabled]="userForm.form.invalid" class="btn btn-success" type="submit">Register</button>

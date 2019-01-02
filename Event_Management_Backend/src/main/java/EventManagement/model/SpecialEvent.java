@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-@Document(collection = "specialEvent")
+@Document(collection = "SpecialEvent")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -24,15 +24,17 @@ public class SpecialEvent {
     private String url;
     private String organizerName;
     private String organizerDetails;
-    private String eventCreationDate;
-    private String eventDate;
-    private String buyEvent;
     private String country;
+    private String category;
     private String date;
-    private int counter = 0;
     private String startTime;
     private String endTime;
-    private int vacancy;
-    private String category;
+    private int ticketVacancy;
+    private int price;
     private List<SubEvent> subEvents;
+
+    public SpecialEvent(String id, List<SubEvent> subEvents) {
+        this.id = id;
+        this.subEvents = subEvents;
+    }
 }

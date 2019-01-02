@@ -30,7 +30,7 @@ public class PaymentController {
     public ResponseEntity<String> chargeCard(HttpServletRequest request) throws Exception {
         String token = request.getHeader("token");
         Double amount = Double.parseDouble(request.getHeader("amount"));
-        System.out.println("I was called");
+        System.out.println("Payment was called");
         this.stripeClient.chargeCreditCard(token, amount);
         return ResponseEntity.status(HttpStatus.OK).body("Charged");
     }
