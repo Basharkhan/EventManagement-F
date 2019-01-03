@@ -1,20 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-input {
+
+.advancedSearchTextbox {
+    width: 60%;
+    height: 2.4rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px; 
+    background-color: #bfbfbf;
+    align-content: center;
+    margin-bottom: 2rem;
+    float: left;
+}
+
+.advancedSearchTextbox:focus {
     border: none;
-    border-radius: 1px;
-    background-color: #4d4d4d;
-    padding: 2px;
-    color: #e6e6e6;
-    text-align: center
+    box-shadow: none;
+    background-color:   #d9d9d9;
+    border-bottom: 2px solid #99ccff;
+  }
+
+  .advancedSearchTextbox::placeholder {
+      color: black;
+      font-size: 1.2rem;
+      text-align: center;
+  }
+
+.heading-underline {
+    width: 13rem;
+    height: .2rem;
+    background-color: #12A434;
+    margin: 1rem auto 1rem;
 }
 
-tr:hover {
-    background-color: #4d4d4d
+h5 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
-button {
-    height: 29px;
-    font-size: 15px;
-    padding: 0 5px 5px 5px;
-    border-radius: 0px;
-}

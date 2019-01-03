@@ -19,13 +19,13 @@ export class PaymentComponent implements OnInit{
   payments: AmountFile;
   message: string = null
   specialEvent: any;
-  
+
   constructor(private eventService:SpecialEventServiceService,private activatedRoute: ActivatedRoute, private authService: AuthserviceService, private tokenStorageService: TokenStorageServiceService, private ngZone: NgZone, private router: Router, private http: Http) {
     this.userName = this.tokenStorageService.getUsername()
   }
 
   ngOnInit() {
-    // this.getAmount();    
+    // this.getAmount();
     this.getSpecialEvent();
   }
 

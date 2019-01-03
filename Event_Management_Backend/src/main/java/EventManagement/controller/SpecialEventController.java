@@ -25,8 +25,8 @@ public class SpecialEventController {
     @Autowired private UserEventRepository userEventRepository;
     @Autowired private UserRepository userRepository;
 
-    @GetMapping
-    @PreAuthorize("hasAnyAuthority('USER', 'ADMIN')")
+    @GetMapping("/getAll")
+//    @PreAuthorize("hasAnyAuthority('USER', 'ADMIN')")
     public List<SpecialEvent> getAllSpecialEvent() {
         return specialEventRepository.findAll();
     }
@@ -38,8 +38,8 @@ public class SpecialEventController {
         return new ResponseEntity<>("Event has been deleted!", HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    @PreAuthorize("hasAnyAuthority('USER', 'ADMIN')")
+    @GetMapping("/getById/{id}")
+//    @PreAuthorize("hasAnyAuthority('USER', 'ADMIN')")
     public SpecialEvent getSpecialEvent(@PathVariable("id") String id) {
         return specialEventRepository.findSpecialEventById(id);
     }

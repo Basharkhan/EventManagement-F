@@ -9,13 +9,12 @@ export class SpecialEventServiceService {
   private specialEventUrl = 'http://localhost:8080/specialEvent';
   private ticketUrl = 'http://localhost:8080/ticket/make-pdf';
   clientID: string = '1vCWHaC5f2uS3yhpwWbIA6';
-baseUrl: string = 'https://api.spotify.com/v1/search?type=artist&limit=10&client_id=' + this.clientID + '&q=';
+  baseUrl: string = 'https://api.spotify.com/v1/search?type=artist&limit=10&client_id=' + this.clientID + '&q=';
   
-
   constructor(private http: HttpClient) { }
 
   getAllSpecialEvents(): Observable<any> {
-    return this.http.get(`${this.specialEventUrl}`)
+    return this.http.get(`${this.specialEventUrl}` + "/getAll")
   }
 
   deleteEvent(id: string): Observable<any> {
@@ -31,7 +30,7 @@ baseUrl: string = 'https://api.spotify.com/v1/search?type=artist&limit=10&client
   }
 
   getSpecialEventsById(id: string): Observable<any> {
-    const url = `${this.specialEventUrl}/${id}`;
+    const url = `${this.specialEventUrl}` + "/getById/" + `${id}`;
     return this.http.get<any>(url);
   }
   

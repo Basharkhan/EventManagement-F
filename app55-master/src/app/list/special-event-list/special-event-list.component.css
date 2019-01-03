@@ -1,19 +1,43 @@
-tr:hover {
-    background-color: #4d4d4d;
-    color: white
-}
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-button {
-    height: 29px;
-    font-size: 15px;
-    padding: 0 5px 5px 5px;
-}
 
 .advancedSearchTextbox {
-    position: relative;
-    left: 2px;
+    width: 60%;
+    height: 2.4rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0px; 
+    background-color: #bfbfbf;
+    align-content: center;
+    margin-bottom: 2rem;
+    float: left;
 }
 
-.advancedSearchTextbox::placeholder {
-    text-align: center
+.advancedSearchTextbox:focus {
+    border: none;
+    box-shadow: none;
+    background-color:   #d9d9d9;
+    border-bottom: 2px solid #99ccff;
+  }
+
+  .advancedSearchTextbox::placeholder {
+      color: black;
+      font-size: 1.2rem;
+      text-align: center;
+  }
+
+.heading-underline {
+    width: 13rem;
+    height: .2rem;
+    background-color: #12A434;
+    margin: 1rem auto 1rem;
 }
+
+h5 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+

@@ -1,44 +1,36 @@
-<!-- <div *ngIf="payments" class="title-payment">
-  <div class="form-group">           
-    <p class="text-center">Amount to be paid:   ৳{{payments.totalAmount}}</p>
-  </div>
 
-</div> -->
-<div class="title-payment">
-  <div class="form-group">           
-    <p class="text-center">Amount to be paid:   ৳{{specialEvent.price}}</p>
-  </div>
-</div>
+    <div class="container card col-md-6" style="height:2rem;margin-bottom:2rem" *ngIf="specialEvent">
+        <div class="form-group">           
+          <p class="text-center">Amount to be paid:   ৳{{specialEvent.price}}</p>
+        </div>
+      </div>
+      
 
-
-<div class="container">
+<div class="container card col-10 col-sm-8 col-md-4">
 
   <form>
 
-    <h4>Payment</h4>
+    <h4 class="text-center">Payment</h4>
 
     <div class="form-group">
-      <label>Card Number</label>
       <input class="form-control" type="text" placeholder="Credit Card #" name="cardNumber">    
     </div>
 
     <div class="form-group">
-      <label>Exp Month</label>
       <input class="form-control" type="text" placeholder="Expiration Month" name="expMonth">
     </div>
 
     <div class="form-group">
-      <label>Exp Year</label>
       <input class="form-control" type="text" placeholder="Expiration Year" name="expYear">
     </div>
 
     <div class="form-group">
-      <label>CVC</label>
       <input class="form-control" type="text" placeholder="CVC" name="cvc">
     </div>
       
     <button class="btn btn-warning" (click)="chargeCreditCard()">Complete Transaction</button>
   </form>
+
 </div>
 
 

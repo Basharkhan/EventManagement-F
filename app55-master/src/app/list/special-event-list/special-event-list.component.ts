@@ -9,7 +9,7 @@ import { TokenStorageServiceService } from 'src/app/services/token-storage-servi
 })
 export class SpecialEventListComponent implements OnInit {
 
-  generalEvent: any;
+  specialEvent: any;
   searchText: string;
   currentUser:string;
 
@@ -21,14 +21,14 @@ export class SpecialEventListComponent implements OnInit {
 
   ngOnInit() {
     this.eventService.getAllSpecialEvents().subscribe(
-      data => this.generalEvent = data
+      data => this.specialEvent = data
     ), error => console.log(error)
   }
 
   delete(event) {
     this.eventService.deleteEvent(event.id)
     .subscribe( data => {
-      this.generalEvent.splice(this.generalEvent.indexOf(event), 1);
+      this.specialEvent.splice(this.specialEvent.indexOf(event), 1);
       window.location.reload();
     },error => {
       console.log(error);

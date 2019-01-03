@@ -1,99 +1,35 @@
+  
+  <div class="container" *ngIf="event">
+    <div class="row text-center"> <!--Start of 1st row-->
+      <div class="col-md-6">
+          <img src="{{event.url}}">
+      </div>
+  
+      
+      <div class="col-md-6 heading">
+        <h3>{{event.eventName}}</h3>
+        <div class="heading-underline"></div>
+        <h4>{{event.date}}</h4>
+        <h4>{{event.eventAddress}}</h4>      
+        <h6>Organized By: {{event.organizerName}}</h6>
+        <button  class="btn btn-success" routerLink = "/ticket/{{event.id}}" (click)="getEvent()">Get Ticket</button>
+      </div>
+    </div> <!--End of 1st row section-->
+  
+    <div class="section-two">
+    <div class="row text-center about"> <!--Start of 2nd row-->
+      <div class="col-md-6">
+        <h3>About</h3>
+        <div class="heading-underline"></div>
+        <p class="lead">{{event.eventDescription}}</p>
+      </div>
 
-<div class="container" *ngIf = "event">
-
-    <div class="first1">
-  
-      <img src="{{event.url}}">
-  
-      <div class="name">
-        <h3 class="eventName">{{event.eventName}}</h3>
-        <h4 class="organizerName">By {{event.organizerName}}</h4>
-        <button class="btn btn-success" data-toggle="modal" data-target="#myModal"  (click) = "getTicket()" >Get Ticket</button>
-      </div>
-  
-      <div class="EventDetails">
-        <h3 class="EventAboutCaption">About</h3>
-        <p class="eventDetails-inner">{{event.eventDescription}}</p>
-      </div>
-  
-      <div class="location">
-        <h3 class="location-caption">Location</h3>
-        <h3 class="location-inner">{{event.eventAddress}}</h3>
-      </div>
-  
-      <div class="date">
-        <h3 class="date-caption">Date</h3>
-        <h3 class="date-inner">{{event.date}}</h3>
-      </div>
-  
-      <div class="time">
-        <h3 class="time-caption">Start Time</h3>
-        <h3 class="time-inner">{{event.startTime}}</h3>
-    
-        <h3 class="time-caption">End Time</h3>
-        <h3 class="time-inner">{{event.endTime}}</h3>
-      </div>
-  
-      <div class="organizer-details">
-          <h3 class="captionOrganizer">About Organizer</h3>
-          <h3 class="organizerDetails">{{event.organizerDetails}}</h3>
+      <div class="col-md-6">
+          <h3>Organizer Details</h3>
+          <div class="heading-underline"></div>
+          <p class="lead">{{event.organizerDetails}}</p>
         </div>
   
-        <div class="subevent" >
-          <h3 class="subeventName">SubEvents</h3>
-          
-        <table class="table table-bordered" *ngFor='let group of event.subEvents'>
-          
-          <thead>
-            <th>Name</th>
-            <th>Start Time</th>
-            <th>End Time</th>
-          </thead>
-  
-          <tbody>
-            <tr>
-                  <td>
-                      <input type='checkbox' name='check[]' value = {{group.name}}>
-  
-                       {{group.name}}
-                   </td>
-                    <td>{{group.startTime}}</td>
-                    <td>{{group.endTime}}</td>
-                    <tr>
-          </tbody>
-        </table>
-        </div>
-  
-      </div>
-  </div>
-  
-  <div class="modal" id="myModal">
-      <div class="modal-dialog">
-        <div class="modal-content">
-        
-          <!-- Modal Header -->
-         
-          
-          <!-- Modal body -->
-          <div class="modal-body" style="position:relative;right: 70px">
-              <p class="msg_success" style="color:green;position: relative;left: 200px;top: 12px">{{ msg }}</p>    
-  
-          </div>
-          
-          <!-- Modal footer -->
-          <div class="modal-footer" style="height:50px">
-            <button type="button" class="btn btn-danger"
-             data-dismiss="modal"
-              style="width:90px;
-              position: absolute;
-              left: 210px;
-              top: 80px
-              ">Close</button>
-          </div>
-          
-        </div>
-      </div>
     </div>
-    
-  
-  
+    </div> <!--End of second row section-->
+  </div><!--End of container-->

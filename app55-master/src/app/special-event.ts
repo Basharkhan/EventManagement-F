@@ -17,14 +17,5 @@ export class SpecialEvent {
       category: string;
       counter: number;
       price: number;
-      // subEvents: Array<any> = [];
-      subEvents: SubEvent;
-}
-
-export class SubEvent{
-      name: string;
-      startTime: string;
-      endTime: string;
-      selected: boolean;
-      vacancy: number;
+      subEvents: Array<any> = [];
 }

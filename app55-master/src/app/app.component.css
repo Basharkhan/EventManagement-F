@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
 /* .footer {
     position: absolute;
     background-color: #404040;
@@ -48,4 +51,13 @@
 
 .dropdown-menu a:hover {
     color: white;
+}
+
+footer {
+    background-color:  #4d4d4d;
+    color: #bfbfbf;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    position: relative;
+    top: 1000px
 }

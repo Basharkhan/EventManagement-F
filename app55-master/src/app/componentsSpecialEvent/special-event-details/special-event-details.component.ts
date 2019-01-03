@@ -11,7 +11,7 @@ import { AuthserviceService } from '../../services/authservice.service';
   styleUrls: ['./special-event-details.component.css']
 })
 export class SpecialEventDetailsComponent implements OnInit {
-  specialEvents: any;
+  specialEvents: SpecialEvent;
   userName: string;
   message: string;
   error: '';
@@ -20,29 +20,19 @@ export class SpecialEventDetailsComponent implements OnInit {
   count = 0;  
   ok:any
   selected: any;
-  isVacant: boolean;
-  isCouponAvailable: boolean;
   
   constructor(private specialEventService: SpecialEventServiceService, private authService: AuthserviceService, private eventService: SpecialEventServiceService, 
               private activatedRoute: ActivatedRoute,
               private tokenStorageService: TokenStorageServiceService,
-              private router: Router
+              private router: Router,
+              private token: TokenStorageServiceService
               ) {
                   this.userName = this.tokenStorageService.getUsername()
                 }
 
-    // ngOnInit() {
-    //   this.specialEventService.getAllSpecialEvents()
-    //     .subscribe(
-    //       data => this.specialEvents = data,
-    //       error => console.log(error)
-    //       )
-    // }
-                                            
-    
 
   ngOnInit() {
-    this.getSpecialEvent()    
+    this.getSpecialEvent()        
   }
 
   getSelectedCategories() {
@@ -56,21 +46,18 @@ export class SpecialEventDetailsComponent implements OnInit {
               this.router.navigate(['/payment/' + id])
               console.log('Success', res)
             }, err => {
-              this.error = err              
+              this.error = err
+              
             }            
         )
   }  
 
   getSpecialEvent() {
-    this.isVacant = false;
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     this.eventService.getSpecialEventsById(id).subscribe(
       event => {
         this.specialEvents = event
-        if(this.specialEvents.ticketVacancy == 0) {
-          this.isVacant = true;
-        }
-        console.log(this.specialEvents.ticketVacancy)
+         console.log(event)
       },error => {
         console.log(error)
       }

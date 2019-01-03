@@ -1,28 +1,33 @@
-<div class="container">
-  <h2 style="color: rgb(48, 47, 47)"> User List</h2>
-  <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox"><br><br>
-  <table class="table table-sm table-dark ">
-    <thead>
-        <th>No</th>
-      <th>Name</th>
-      <th>email</th>
-      <th>username</th>
-      <th>Roles</th>
-      <th>Action</th>
-  </thead>
-    <tbody>
-        <tr *ngFor="let user of users | grdFilter: {name: searchText, email:searchText,  username: searchText}; let i=index;">
-        <td>{{i+1}}</td>
-      <td>{{user.name}}</td>
-      <td>{{user.email}}</td>
-      <td>{{user.username}}</td>
-      <td>{{authorities}}</td>
-      <td>
-        <button type="button" class="btn btn-danger" (click)="delete(user)">Delete</button>
-        <button type="button" class="btn btn-primary" (click)="edit()" style="position:relative;left:3px">Edit</button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
+<div class="container col md-4">
 
-</div>
+
+    <h5>Users List</h5>
+    <div class="heading-underline"></div>
+    <div class="col-sm-8 col-md-6" style="min-width: 270px;">
+    <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox"><br>
+    </div>
+
+
+  <table class="table table-sm" >
+
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Username</th>
+          <th scope="col">Action</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let user of users | grdFilter: {name: searchText, username:searchText,  id: searchText}">
+          <td scope="row">{{user.id}}</td>
+          <td scope="row">{{user.name}}</td>
+          <td scope="row">{{user.username}}</td>
+          <td scope="row">
+              <button *ngIf="token.loggedIn() && token.loggedAdmin()" class="btn btn-danger" (click) = "delete(user)">Delete</button>
+            </td>
+        </tr>
+       
+      </tbody>
+    </table>

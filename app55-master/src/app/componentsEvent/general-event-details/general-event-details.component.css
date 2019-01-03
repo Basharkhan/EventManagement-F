@@ -1,138 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-.first1 {
-    border: 1px solid #d9d9d9;
-    height: 1250px;
-    width: 1150px
+.bg {
+    background-color: #EAECEE;
 }
 
-img {
-    position: relative;
-    width: 500px;
-    height: 300px;
-    left: 620px;
-    top: 30px;
+.row img {
+    width: 100%;
+    float: left;
+    height: 20rem;
 }
 
-.eventName {
-    position: relative;
-    font-size: 19px;
-    width: 600px;
-    bottom: 250px;
-    color: #666666;
+.heading {    
+    padding: 10px;
+    text-align: justify
 }
 
-.organizerName {
-    position: relative;
-    bottom: 237px;
-    font-size: 16px
+.heading-underline {
+    width: 6rem;
+    height: .2rem;
+    background-color: #12A434;
+    margin: 1rem auto 1rem;
 }
 
-button {
-    position: absolute;
-    bottom: 20px;
-    height: 40px;
-    left: 96px;
-    width: 400px;
+.heading h3 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-align: center
 }
 
-.name {
-    position: relative;
-    left: 10px;
+.heading h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
-.EventDetails {
-    position: absolute;
-    left: 160px;
-    top: 475px;
+.heading h6 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    color: green
 }
 
-.eventDetails-inner {
-    position: relative;
-    width: 550px;
+.heading h5 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+ p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 1.0rem;
     text-align: justify;
-    word-spacing: -2px
 }
 
-.EventAboutCaption {
-    position: relative;
-    bottom: 12px;
-    left: 220px;
-    font-size: 22px;
+.btn-success {
+    text-transform: uppercase;    
 }
 
-.location {
-    position: absolute;
-    left: 850px;
-    top: 476px
-}
-
-.location-caption {
-    font-size: 23px
-}
-
-.location-inner {
-    font-size: 16px;
-    width: 400px
-}
-
-.organizer-details {
-    position: absolute;
-    top:770px;
-    left: 160px;
-}
-
-.organizerDetails {
-    position: relative;
-    font-size: 16px;
-    width: 550px;
-    word-spacing: 4px;
-    text-align: justify;
+.section-two {
+    margin-top: 3.0rem;
     
 }
 
-.captionOrganizer {
-    font-size: 22px;
+
+.container {
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.date {
-    position: absolute;
-    left: 850px;
-    top: 570px
+.table1 {
+    position: relative;
+    left: 6%
 }
 
-.date-caption {
-    font-size: 23px;
+button {
+    margin-bottom: 3rem;
+    font-family: 'Lato', sans-serif;
+    width: 70%;
+    height: 3rem
 }
 
-.date-inner {
-    font-size: 16px;
-}
-
-.time {
-    position: absolute;
-    left: 850px;
-    top: 660px
-}
-
-.time-caption {
-    font-size: 23px
-}
-
-.time-inner {
-    font-size: 16px;
-}
-
-.subevent {
-    position: absolute;
-    left:850px;
-    top: 810px;
-}
-
-td {
-    width: 135px;
-    height: 10px;
-}
-
-table {
-    font-size: 14px
+.text-danger {
+    font-size: 1.0rem
 }

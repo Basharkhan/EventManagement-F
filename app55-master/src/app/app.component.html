@@ -1,5 +1,5 @@
-<div>
- <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <a class="navbar-brand" href="#">EventGo</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
@@ -8,16 +8,14 @@
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-
-
       <a class="nav-link" *ngIf="token.loggedIn()" routerLink="/dash" routerLinkActive="active">Dashboard</a>
     </li>
     <li class="nav-item">
         <a class="nav-link"  routerLink="/generalEvent" routerLinkActive="active">Events</a>
-      </li>
+    </li>
 
       <li class="nav-item">
-        <a class="nav-link" *ngIf="token.loggedIn()"  routerLink="/specialEvent" routerLinkActive="active">Special Events</a>
+        <a class="nav-link"  routerLink="/specialEvent" routerLinkActive="active">Special Events</a>
       </li>
 
       <li class="nav-item" *ngIf="token.loggedIn() && token.loggedAdmin()">
@@ -32,18 +30,27 @@
             <li>
               <a routerLink="/createGeneralEvent" routerLinkActive="active">Create General Event</a>
               </li>
-              <li>
-                  <a routerLink="/admin" routerLinkActive="active">Create New Admin</a>
-                  </li>
+            <li>
+              <a routerLink="/admin" routerLinkActive="active">Create New Admin</a>
+            </li>
 
-                  <li>
-                      <a routerLink="/list" routerLinkActive="active">Members</a>
-                    </li>
+            <li>
+              <a routerLink="/list" routerLinkActive="active">Members</a>
+            </li>
+
+            <li>
+              <a routerLink="/generalEventList" routerLinkActive="active">General Event List</a>
+            </li>
+
+            <li>
+              <a routerLink="/specialEventList" routerLinkActive="active">Special Event List</a>
+            </li>
+
           </div>
       </div>  
     </li>
 
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <div class="nav-link dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown">
           Ongoing events 
@@ -54,10 +61,10 @@
             </li>
             <li>
               <a routerLink="/specialEventList"  routerLinkActive="active">All Specialevents list</a>
-              </li>
+            </li>
           </div>
       </div>  
-    </li>
+    </li> -->
       
 
   </ul>
@@ -86,18 +93,12 @@
 
 </div>
 </nav>    
-
 <div class="container">
   <router-outlet></router-outlet>     
-</div>
-<!-- <footer>
-    <div class="row justify-content-center">
-      <div class="col-md-5 text-center">
-        <strong>Contact info</strong>
-        <p>(888) 888 9990 <br> basharkhan71@gmail.com</p>
+  </div>
+  
+<footer>
+      <div class="col-md-12 text-center">
+        <p>copyright to @southeast university</p>
       </div>
-    </div>
-</footer> -->
-
-</div>
-<!-- <div class="footer">copyright to @southeast university</div>      -->
+</footer>

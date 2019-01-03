@@ -1,23 +1,32 @@
-<h5>General Event</h5>
-<input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox"><br>
-<table class="table table-bordered table-sm  ">
-  <thead class="thead-dark ">
-    <th>Event Id</th>
-    <th>Event Name</th>
-    <th>Event Address</th>
-    <th>Action</th>
-  </thead>
+<div class="container col md-8">
 
-  <tbody>
-    <tr *ngFor = "let event of generalEvent | grdFilter: {id: searchText, eventName:searchText,  eventAddress: searchText}">
-      <td>{{event.id}}</td>
-      <td>{{event.eventName}}</td>
-      <td>{{event.eventAddress}}</td>
-      <td>
-        <button *ngIf="token.loggedIn() && token.loggedAdmin()" class="btn btn-danger" style="position:relative;left:1px;bottom: 1px"  (click) = "delete(event)">Delete</button>
-        <button class="btn btn-primary" routerLink = "/event-details/{{event.id}}">Details</button>
 
-      </td>
-    </tr>
-  </tbody>
-</table>
+    <h5>General Events List</h5>
+    <div class="heading-underline"></div>
+    <div class="col-sm-8 col-md-7 col-md-offset-2" style="min-width: 270px;">
+    <input [(ngModel)]="searchText" placeholder="Search.." class="advancedSearchTextbox"><br>
+    </div>
+
+  <table class="table table-striped">
+      <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">Event Name</th>
+            <th scope="col">Event Location</th>
+            <th scope="col">Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor = "let event of generalEvent | grdFilter: {id: searchText, eventName:searchText,  eventAddress: searchText}">
+          <td scope="row">{{event.id}}</td>
+          <td scope="row">{{event.eventName}}</td>
+          <td scope="row">{{event.eventAddress}}</td>
+          <td scope="row">
+              <button *ngIf="token.loggedIn() && token.loggedAdmin()" class="btn btn-danger" style="position:relative;left:1px;bottom: 1px"  (click) = "delete(event)">Delete</button>
+              <button class="btn btn-primary" routerLink = "/event-details/{{event.id}}">Details</button>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

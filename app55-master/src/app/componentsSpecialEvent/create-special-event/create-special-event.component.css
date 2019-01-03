@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
-.sp-event {
-  
-}
+
 
 .heading {
-  border-radius: 5px;
   font-family: 'Lato', sans-serif;
-  font-size: 700;
-  font-size: 2.2rem;
   background-color: #56AB5E;
   color: white;  
   padding: .3rem 3rem ;
@@ -34,10 +29,54 @@ form label {
   text-transform: uppercase;
   font-size: 1.1rem;
   padding: .1 1rem;
-  width: 30%;
+
 }
 
 .btn-primary {
   text-transform: uppercase;
-  width: 30%;
+  height: 2rem;
+  font-size: 0.9rem;
+  background-color: #ffa31a;
+  border: none;
+  font-weight: 500;
+}
+.btn-primary:hover {
+  background-color: #ffa31a;
+}
+
+
+/* input {
+  height: 2rem;
+  border-top: none;
+  border-right: none;
+  border-left: none; 
+  border-radius: 0px; 
+} */
+
+input:focus {
+  border: none;
+  box-shadow: none;
+  background-color:   #f2f2f2;
+  border-bottom: 2px solid #99ccff;
+}
+
+textarea {
+  height: 4rem;
+}
+
+ select {
+  text-align: center;
+  font-size: 0.9rem;
+  height: 2.1rem
+}
+
+::placeholder {
+  font-size: 1.0rem;
+  color: #999999
+}
+
+hr {
+  background-color:   #d9d9d9;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+
 }

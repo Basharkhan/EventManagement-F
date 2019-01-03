@@ -30,8 +30,8 @@ const routes: Routes = [
   {path: 'generalEventList', component: GeneralEventListComponent},
   //User Guard
   {path: 'dash', component: DashboardComponent, canActivate:[AuthGuard]},
-  {path: 'specialEvent', component: SpecialEventComponent, canActivate: [AuthGuard]},
-  {path: 'specialEventDetails/:id', component: SpecialEventDetailsComponent, canActivate: [AuthGuard]},
+  {path: 'specialEvent', component: SpecialEventComponent},
+  {path: 'specialEventDetails/:id', component: SpecialEventDetailsComponent},
   {path: 'specialEventList', component: SpecialEventListComponent, canActivate: [AuthGuard]},
   {path: 'ticket/:id', component: TicketPrintingComponent, canActivate: [AuthGuard]},
   {path: 'payment/:id', component: PaymentComponent,  canActivate: [AuthGuard]},

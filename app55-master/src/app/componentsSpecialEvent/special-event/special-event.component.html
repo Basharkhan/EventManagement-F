@@ -1,14 +1,34 @@
 
-<div class="container">
-              
-    <h3>Special Events List</h3>
+<div class="container col-10 col-sm-8 col-md-10">
+
+        <h3>Ongoing Special Events</h3>
+
+    <input [(ngModel)]="searchText" placeholder="..... Search events by name, category, address ....." class="advancedSearchTextbox"><br><br>
+
+
     <div class="card" *ngFor = "let event of pagedItems| grdFilter: {eventName: searchText, category:searchText,  eventAddress: searchText}; let i=index;">
+
       <div class="card-body">
+
+          <div class="row">
+
+    <div class="col-md-5">
         <a class="card-title" routerLink = "/specialEventDetails/{{event.id}}">{{event.eventName}}</a>
-        <img src="{{event.url}}" routerLink = "/specialEventDetails/{{event.id}}">
         <p class="card-text">{{event.eventAddress}}</p>
-        <h5>Organized by</h5> <p class="card-text" style="color:#208000">{{event.organizerName}}</p>
+        <p class="card-text">{{event.date}}</p>
+        <h5>Organized by</h5> 
+        
+        <p class="card-text" style="color:#208000">{{event.organizerName}}</p>
+    </div>
+
+    <div class="col-md-7">
+        <img src="{{event.url}}">
       </div>
+
+    </div>
+
+        </div>
+ 
     </div>
 
     <div class="page-config">

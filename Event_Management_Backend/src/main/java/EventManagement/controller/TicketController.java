@@ -84,7 +84,7 @@ public class TicketController {
                 subEventsName.add(subEvents.get(i).getName());
             }
 
-            UserSubEvent userSubEvent = new UserSubEvent("5c2627aea6b6b41034469d3e", subEventsName);
+            UserSubEvent userSubEvent = new UserSubEvent("5c2627aea6b6b41034469d3f", subEventsName);
             userSubEventRepo.save(userSubEvent);
 
             //--------money---------------
@@ -119,7 +119,7 @@ public class TicketController {
                 subEventsName.add(subEvents.get(i).getName());
             }
 
-            UserSubEvent userSubEvent = new UserSubEvent("5c2627aea6b6b41034469d3e", subEventsName);
+            UserSubEvent userSubEvent = new UserSubEvent("5c2627aea6b6b41034469d3f", subEventsName);
             userSubEventRepo.save(userSubEvent);
 
 
@@ -155,7 +155,7 @@ public class TicketController {
         SpecialEvent specialEvent = specialEventRepository.findSpecialEventById(eventId);
         List<SubEvent> subEvents = specialEvent.getSubEvents();
 
-        UserSubEvent userSubEvent = userSubEventRepo.findUserSubEventById("5c2627aea6b6b41034469d3e");
+        UserSubEvent userSubEvent = userSubEventRepo.findUserSubEventById("5c2627aea6b6b41034469d3f");
         List<String> names = userSubEvent.getNameList();
 
         //----------- Ticket Vacancy---------------------
