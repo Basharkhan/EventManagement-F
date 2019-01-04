@@ -14,6 +14,8 @@ export class GeneralEventDetailsComponent implements OnInit {
   event: GeneralEvent;
   userName: string;
   successMsg: '';
+  errorMsg: '';
+
   constructor(private eventService: GeneralEventServiceService, 
               private activatedRoute: ActivatedRoute,
               private tokenStorageService: TokenStorageServiceService,
@@ -34,6 +36,7 @@ export class GeneralEventDetailsComponent implements OnInit {
             this.successMsg = response
             console.log("Success", response)
           }, error => {
+            this.errorMsg = error
             console.log("Failed", error)
           }
         )

@@ -56,8 +56,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     ConfirmationComponent
   ],
 
-  imports: [
-    NgModule,
+  imports: [    
     BrowserModule,
     HttpClientModule,
     FormsModule,
@@ -71,8 +70,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
   ],
 
   exports:[
-    MatAutocompleteModule,
-    FormsModule
+    MatAutocompleteModule,    
   ],
 
   providers: [AuthserviceService,PageServiceService,AuthGuard,TokenStorageServiceService,{
