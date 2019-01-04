@@ -11,9 +11,13 @@ export class GeneralEventServiceService {
 
   private generalEventUrl = 'http://localhost:8080/generalEvent';
   private ticketUrl = 'http://localhost:8080';
-  
+  private ticketAndMailUrl = "http://localhost:8080/generalEvent/send-mail"
 
   constructor(private http: HttpClient) { }
+
+  sendTicketViaEmail(username: string, eventId: string): Observable<any> {
+    return this.http.get(`${this.ticketAndMailUrl}/${username}/${eventId}`, {responseType: 'text'});
+  }
 
   getAllGeneralEvents(): Observable<any> {
     return this.http.get(`${this.generalEventUrl}`)

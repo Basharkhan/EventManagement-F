@@ -4,45 +4,45 @@
             <h3 class="text-center">Register</h3>
         </div>
         <div class="form-group">
-            <label for="username">Your username</label>
+            <!-- <label for="username">Your username</label> -->
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="far fa-user"></i></span>
                 </div>
-                <input [(ngModel)]="user.username" required #username="ngModel" [class.is-invalid]="username.invalid && username.touched" class="form-control" type="text" name="username" placeholder="Enter Username">                
+                <input [(ngModel)]="user.username" required #username="ngModel" [class.is-invalid]="username.invalid && username.touched" class="form-control" type="text" name="username" placeholder="Username">                
             </div>
         <small class="text-danger" [class.d-none]="username.valid || username.untouched">Username is required</small>    
         </div>
 
         <div class="form-group">
-            <label for="fullName">Your fullname</label>
+            <!-- <label for="fullName">Your fullname</label> -->
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                 </div>
-                <input [(ngModel)]="user.name" required #fullName="ngModel" [class.is-invalid]="fullName.invalid && fullName.touched" class="form-control" type="text" name="fullName" placeholder="Enter Fullname">    
+                <input [(ngModel)]="user.name" required #fullName="ngModel" [class.is-invalid]="fullName.invalid && fullName.touched" class="form-control" type="text" name="fullName" placeholder="Fullname">    
             </div>
             <small class="text-danger" [class.d-none]="fullName.valid || fullName.untouched">Fullname is required</small>    
         </div>
 
         <div class="form-group">
-            <label for="email">Your email</label>
+            <!-- <label for="email">Your email</label> -->
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                 </div>
-                <input [(ngModel)]="user.email" required #email="ngModel" [class.is-invalid]="email.invalid && email.touched" class="form-control" type="email" name="email" placeholder="Enter Email">
+                <input [(ngModel)]="user.email" required #email="ngModel" [class.is-invalid]="email.invalid && email.touched" class="form-control" type="email" name="email" placeholder="Email">
             </div>
             <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email is required</small>    
         </div>
 
         <div class="form-group">
-            <label for="password">Your password</label>
+            <!-- <label for="password">Your password</label> -->
             <div class="input-group">
                 <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-unlock"></i></span>
                 </div>
-                <input [(ngModel)]="user.password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control" type="password" name="password" placeholder="Enter Password">
+                <input [(ngModel)]="user.password" required #password="ngModel" [class.is-invalid]="password.invalid && password.touched" class="form-control" type="password" name="password" placeholder="Password">
             </div>
             <small class="text-danger" [class.d-none]="password.valid || password.untouched">Password is required</small>    
         </div>

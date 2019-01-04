@@ -29,6 +29,31 @@ export class PaymentComponent implements OnInit{
     this.getSpecialEvent();
   }
 
+  expMonths = [{month: '01'},
+                {month: '02'},
+                {month: '03'},
+                {month: '04'},
+                {month: '05'},
+                {month: '06'},
+                {month: '07'},
+                {month: '08'},
+                {month: '09'},
+                {month: '10'},
+                {month: '11'},
+                {month: '12'}]
+
+  expYears = [{year: '19'},
+              {year: '20'},
+              {year: '21'},
+              {year: '22'},
+              {year: '23'},
+              {year: '24'},
+              {year: '25'},
+              {year: '26'},
+              {year: '27'},
+              {year: '28'},
+              {year: 29}]
+
   getSpecialEvent() {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
     this.eventService.getSpecialEventsById(id).subscribe(
@@ -73,7 +98,6 @@ export class PaymentComponent implements OnInit{
         console.log("Failed!", response.error.message);     
       }
     })
-
   }
   
   chargeCard(token: string) {
@@ -95,7 +119,6 @@ export class PaymentComponent implements OnInit{
               console.log("Email Sent", response)
             }, error => {
               console.log("Sending Failed", error)
-
             }
           )
       }, error => {

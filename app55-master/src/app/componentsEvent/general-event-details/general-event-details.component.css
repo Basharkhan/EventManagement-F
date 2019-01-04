@@ -4,86 +4,73 @@
     background-color: #EAECEE;
 }
 
+.container-fluid {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    color: #505962;        
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);    
+}
+
 .row img {
     width: 100%;
-    float: left;
     height: 20rem;
 }
 
 .heading {    
-    padding: 10px;
-    text-align: justify
+    margin-top: 2rem;
 }
 
 .heading-underline {
-    width: 6rem;
+    width: 5rem;
     height: .2rem;
     background-color: #12A434;
     margin: 1rem auto 1rem;
 }
 
+.heading h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
 .heading h3 {
     font-family: 'Lato', sans-serif;
-    font-weight: 500;
-    font-size: 1.8rem;
-    text-align: center
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
-.heading h4 {
+.heading h2 {
+    font-weight: 400;
+    font-size: 1.3rem;
+}
+
+.free {
+    text-transform: uppercase;
+    color: #12A434;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.btn-primary {
+    text-transform: uppercase;
+}
+.about p {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 1.2rem;
-}
-
-.heading h6 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    margin-bottom: 4rem;
-    font-size: 1.2rem;
-    color: green
-}
-
-.heading h5 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-
- p {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 1.0rem;
-    text-align: justify;
+    font-size: 1.1rem;
 }
 
 .btn-success {
     text-transform: uppercase;    
 }
 
-.section-two {
-    margin-top: 3.0rem;
-    
+.section-two {    
+    margin-top: 2rem;
 }
 
-
-.container {
-    border: 1px solid #e6e6e6;
-    padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+.section-two h1{
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
-.table1 {
-    position: relative;
-    left: 6%
-}
-
-button {
-    margin-bottom: 3rem;
-    font-family: 'Lato', sans-serif;
-    width: 70%;
-    height: 3rem
-}
-
-.text-danger {
-    font-size: 1.0rem
-}

@@ -4,13 +4,20 @@
     background-color: #EAECEE;
 }
 
+
+.container-fluid {
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    color: #505962;        
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);    
+}
 .row img {
     width: 100%;
     height: 20rem;
 }
 
 .heading {    
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .heading-underline {
@@ -23,13 +30,13 @@
 .heading h1 {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
-    font-size: 3.2rem;
+    font-size: 1.5rem;
 }
 
 .heading h3 {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .about p {
@@ -46,3 +53,14 @@
     margin-top: 2rem;
 }
 
+.section-two h1 {
+    font-size: 1.8rem;    
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.jumbotron h2 {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.8rem;
+}

@@ -1,6 +1,4 @@
 export class GeneralEvent {
-   
-
     id: string;
     eventName: string;
     eventAddress: string;

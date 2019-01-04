@@ -1,28 +1,37 @@
 
-    <div class="container card col-md-6" style="height:2rem;margin-bottom:2rem" *ngIf="specialEvent">
-        <div class="form-group">           
-          <p class="text-center">Amount to be paid:   ৳{{specialEvent.price}}</p>
-        </div>
-      </div>
-      
-
-<div class="container card col-10 col-sm-8 col-md-4">
+<div class="container col-10 col-sm-8 col-md-4">
 
   <form>
-
-    <h4 class="text-center">Payment</h4>
+    <p class="text-center">Amount to be Paid {{specialEvent.price}} ৳</p>
 
     <div class="form-group">
-      <input class="form-control" type="text" placeholder="Credit Card #" name="cardNumber">    
+      <input required #cardNumber="ngModel" [class.is-invalid]="cardNumber.invalid && cardNumber.touched"  class="form-control" type="text" placeholder="Credit Card #" name="cardNumber">    
+      <small class="text-danger" [class.d-none]="cardNumber.valid || cardNumber.untouched">Card number is required</small>
     </div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
       <input class="form-control" type="text" placeholder="Expiration Month" name="expMonth">
+    </div> -->
+
+    <div class="form-group">
+      <select class="form-control" name="expMonth" type="number" placeholder="exp_month">
+          <option value="" disabled selected>Expiry Month</option>
+        <option *ngFor="let expMonth of expMonths">{{expMonth.month}}</option>
+      </select>
     </div>
 
     <div class="form-group">
-      <input class="form-control" type="text" placeholder="Expiration Year" name="expYear">
+      <select class="form-control" name="expYear" type="number" placeholder="exp_month">
+          <option value="" disabled selected>Expiry Year</option>
+        <option *ngFor="let expYear of expYears">{{expYear.year}}</option>
+      </select>
     </div>
+      
+
+
+    <!-- <div class="form-group">
+      <input class="form-control" type="text" placeholder="Expiration Year" name="expYear">
+    </div> -->
 
     <div class="form-group">
       <input class="form-control" type="text" placeholder="CVC" name="cvc">

@@ -1,7 +1,8 @@
 import { Component, OnInit, ElementRef ,ViewChild} from '@angular/core';  
 import { GeneralEventServiceService } from 'src/app/servicesEvent/general/general-event-service.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TokenStorageServiceService } from '../../services/token-storage-service.service';
+import { GeneralEvent } from '../../general-event';
 
 @Component({
   selector: 'app-general-event-details',
@@ -10,18 +11,32 @@ import { TokenStorageServiceService } from '../../services/token-storage-service
 })
 export class GeneralEventDetailsComponent implements OnInit {
 
-  event:any;
+  event: GeneralEvent;
   userName: string;
-
+  successMsg: '';
   constructor(private eventService: GeneralEventServiceService, 
               private activatedRoute: ActivatedRoute,
-              private tokenStorageService: TokenStorageServiceService
+              private tokenStorageService: TokenStorageServiceService,
+              private router: Router
               ) {
                   this.userName = this.tokenStorageService.getUsername()
                 }
   
   ngOnInit() {
     this.getEvent()        
+  }
+
+  sendTicket() {
+    const id = this.activatedRoute.snapshot.paramMap.get('id');
+    this.eventService.sendTicketViaEmail(this.userName, id)
+        .subscribe(
+          response => {
+            this.successMsg = response
+            console.log("Success", response)
+          }, error => {
+            console.log("Failed", error)
+          }
+        )
   }
 
   getEvent() {

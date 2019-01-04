@@ -11,17 +11,17 @@
         <div class="heading-underline"></div>
         <h3>{{specialEvents.date}}</h3>
         <h3>{{specialEvents.eventAddress}}</h3>      
-        <h4>Registration Fee {{specialEvents.price}} ৳</h4>      
-        <h4>Remaining Ticket {{specialEvents.ticketVacancy}}</h4>      
+        <h3>Registration Fee {{specialEvents.price}} ৳</h3>      
+        <h3>Remaining Ticket {{specialEvents.ticketVacancy}}</h3>      
       </div>
     </div> <!--End of 1st row section-->
   
     <div class="section-two">
     <div class="row text-center about"> <!--Start of 2nd row-->
-      <div class="col-md-6 justify-content">
+      <div class="col-md-6">
         <h1>About</h1>
         <div class="heading-underline"></div>
-        <p class="lead">{{specialEvents.eventDescription}}</p>
+        <p class="lead justify-content">{{specialEvents.eventDescription}}</p>
       </div>
   
       <div class="col-md-6">
@@ -63,7 +63,7 @@
           </div>      
 
           <div *ngIf="!token.loggedIn()">          
-            <button routerLink="/login" class="btn btn-success float-right" type="button" (click)="getSelectedCategories()">Login To Get Ticket</button>
+            <button routerLink="/login" class="btn btn-success float-right" type="button">Login To Get Ticket</button>
           </div>      
 
           
@@ -71,8 +71,12 @@
     </div> <!--End of second row section-->
     </div>
   
-    <div class="col-12 text-center">
-      <h2>Organized By {{specialEvents.organizerName}}</h2>
+    <div class="jumbotron">
+      <div class="col-12 text-center">
+        <h2>Organized By {{specialEvents.organizerName}}</h2>
+        <div class="heading-underline"></div>        
+        <p>{{specialEvents.organizerDetails}}</p>
+      </div>  
     </div>
     
   </div><!--End of container-->
